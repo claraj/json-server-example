@@ -1,0 +1,14 @@
+make a .json file
+install json-server 
+
+https://github.com/typicode/json-server
+
+
+
+npm install json-server
+
+node_modules/.bin/json-server --watch server.json
+
+Press control+c to stop server 
+
+todo remind clara about installing npm packages globally 

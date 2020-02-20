@@ -1,0 +1,31 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "what is ... ",
+      "correctanswer": "a",
+      "wronganswers": [
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "who is ... ",
+      "correctanswer": "a",
+      "wronganswers": [
+        "q",
+        "w",
+        "f"
+      ]
+    }
+  ],
+  "scores": [
+    {
+      "name": "Cat",
+      "score": 199,
+      "id": 1
+    }
+  ]
+}
