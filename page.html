@@ -10,28 +10,33 @@ let scoresUrl = "http://localhost:3000/scores"
 
 let list = document.querySelector("#list")
 
-fetch(questionsUrl).then( resp => resp.json())
-.then( questions => {
-
-    questions.forEach(question => {
-        let item = document.createElement('li')
-        item.innerHTML = question.question
-        list.appendChild(item)
-    });
+fetch(questionsUrl)
+    .then( resp => resp.json())
+    .then( questions => {
+        questions.forEach(question => {
+            let item = document.createElement('li')
+            item.innerHTML = question.question
+            list.appendChild(item)
+        });
 
 })
 
 
 document.querySelector('#submit').addEventListener('click', function() {
     
-    // for example - you
+    // for example - you would get this from data the user entered 
     let data = { name: 'Cat', score: 199}
 
-    fetch(scoresUrl, { method: 'POST',  headers: {
-      'Content-Type': 'application/json'
-    }, body: JSON.stringify(data) }).then(resp => { 
-        console.log(resp)
-    })
+    fetch(scoresUrl, { 
+        method: 'POST',  
+        headers: {
+            'Content-Type': 'application/json'
+        }, 
+        body: JSON.stringify(data) 
+        })
+        .then(resp => { 
+            console.log(resp)
+        })
 })
 
 </script>
